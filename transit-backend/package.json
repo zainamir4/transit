@@ -1,0 +1,19 @@
+{
+  "name": "transit-timer",
+  "version": "1.0.0",
+  "description": "An app that shows a countdown for each bus at a particular stop",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Zain Amir",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-polyfill": "^6.23.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-register": "^6.24.1"
+  },
+  "dependencies": {
+    "mongodb": "^2.2.26"
+  }
+}
