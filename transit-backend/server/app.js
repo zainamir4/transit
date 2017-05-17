@@ -1,6 +1,7 @@
 import express from 'express';
 import dbConfig from './config/db';
 import middlewareConfig from './config/middlewares';
+import { TransitRoutes } from './modules/app';
 
 const app = express();
 
@@ -9,6 +10,8 @@ dbConfig();
 
 //Middleware
 middlewareConfig(app);
+
+app.use('/api', [TransitRoutes]);
 
 const PORT = process.env.PORT || 3000;
 

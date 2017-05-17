@@ -2,9 +2,9 @@ import mongoose, { Schema } from 'mongoose';
 
 const TransitSchema = new Schema({
     stop: {
-        stopnumer: Integer,
+        stopnum: Number,
         location: String,
-        required: true
+        required: Boolean
     }
 });
 
