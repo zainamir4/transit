@@ -12,3 +12,11 @@ export const createTransit = async (req, res) => {
         return res.status(500).json({ error: true, message: 'Error with creating a Transit'})
     }
 }
+
+export const getAllTransits = async (req, res) => {
+    try {
+        return res.status(200).json({ transit: await Transit.find({} )});
+    } catch (e) {
+        return res.status(500).json({ error: true, message: 'Error with fetching all transit'})
+    }
+}
