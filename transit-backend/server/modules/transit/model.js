@@ -1,10 +1,13 @@
 import mongoose, { Schema } from 'mongoose';
 
 const TransitSchema = new Schema({
-    stop: {
-        stopnum: Number,
-        location: String,
-        required: Boolean
+    stopnum: {
+        type: String,
+        required: true
+    },
+    location: {
+        type: String,
+        required: true
     }
 });
 

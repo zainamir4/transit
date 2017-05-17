@@ -1,14 +1,14 @@
 // The Rest endpoints go here !!
 
-import Tranist from './model';
+import Transit from './model';
 
 export const createTransit = async (req, res) => {
-    const { stop } = req.body;
-    const newTransit = new Transit({ stop });
+    const { stopnum, location } = req.body;
+    const newTransit = new Transit({ stopnum, location });
 
     try {
         return res.status(201).json({ transit: await newTransit.save() })
     } catch (e) {
-        return res.status(e.status).json({ error: true, message: 'Error with creating a Transit'})
+        return res.status(500).json({ error: true, message: 'Error with creating a Transit'})
     }
 }
